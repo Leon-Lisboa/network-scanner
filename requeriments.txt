@@ -1,0 +1,11 @@
+network-scanner/
+├── scanner_gui_total.py   # Código-fonte principal
+├── README.md            # Arquivo README com informações nos 3 idiomas
+├── requirements.txt     # Bibliotecas necessárias
+├── scan_results.txt     # Exemplo de resultados salvos
+
+libraries requests : 
+
+scapy
+requests
+

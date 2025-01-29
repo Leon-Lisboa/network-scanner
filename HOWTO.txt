@@ -1,0 +1,40 @@
+Projeto : Ferramenta de Varredura de Rede (Network Scanner)
+
+Descrição:
+Este projeto cria um scanner de rede que descobre dispositivos conectados a uma rede local, identifica os IPs ativos e as portas abertas, e opcionalmente verifica informações sobre o sistema operacional. É útil para administradores de rede e profissionais de segurança testarem redes em busca de vulnerabilidades ou monitorarem dispositivos conectados.
+
+Funcionalidades do Projeto:
+
+    1. Descobrir dispositivos ativos na rede local.
+        Enviar pacotes ARP para identificar dispositivos na rede.
+    2. Detectar portas abertas em dispositivos específicos.
+        Realizar varredura de portas para serviços ativos.
+    3. Identificar o fabricante da interface de rede (MAC Vendor).
+        Usar endereços MAC para inferir o fabricante.
+    4. Exportar resultados para um arquivo (CSV ou JSON).
+        Permitir fácil reutilização e análise dos dados coletados.
+
+Melhorias no código :
+
+* Validação de IP: Verifica se o intervalo de IP inserido é válido antes de iniciar o escaneamento.
+* Threading: O escaneamento e a busca de portas são realizados em uma thread separada para evitar travamentos na interface gráfica.
+* API de Mac Vendors: Integração com a API para identificar fabricantes dos dispositivos.
+* Interface Gráfica (GUI): Mais organizada e com mensagens de erro claras.
+* Manuseio de Erros: Tratamento de exceções em cada etapa para garantir estabilidade.
+
+Bibliotecas Necessárias:
+
+    scapy: Para manipulação de pacotes de rede.
+    socket: Para conexões de rede e escaneamento de portas.
+    argparse: Para gerenciar argumentos de linha de comando.
+    json ou csv: Para exportar os resultados.
+
+
+Como Usar (no Linux)
+
+    1. Certifique-se de que o scapy, o requests e outras dependências estão instalados : pip install scapy requests
+    2. Execute o script como administrador (em Windows ou Linux) : No Linux, no terminal digite sudo python3 scanner_gui_total.py
+    3. Insira o intervalo de IP no formato CIDR, como 192.168.1.0/24.
+    4. Visualize os resultados na interface e salve-os, se necessário.
+
+Teste e aproveite! 🚀
